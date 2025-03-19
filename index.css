@@ -33,6 +33,11 @@ body
 	justify-content: center;
 	border: none;
 }
+#topBox img
+{
+	height:90%;
+	width:auto;
+}
 #bottomBox
 {
 	height:15%;
@@ -106,7 +111,7 @@ body
 #selectionHeader p
 {
 	font-family: "Russo";
-	font-size:min(2.5vh,2.5vw);
+	font-size:40px;
 	color: black;
 }
 #innerBackground
@@ -146,6 +151,10 @@ body
 	width:22%;
 	font-size: max(1vh, 1vw);
 
+}
+.optionHolder h2
+{
+	font-size: max(1vh, 1vw);
 }
 
 
