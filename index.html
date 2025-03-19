@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./index.css">
 </head>
 <body>
+
 	<div id="topBox">
 		<img src="Assets/Shared/hearthle_logo.webp">
 	</div>
@@ -39,9 +40,37 @@
 			
 		</div>
 	</div>
+
 	<div id="bottomBox">
-		Game Reset Timer
+		<p>GAME RESET</p>
+		<div id="gameResetTimer">
+			00:00:00
+		</div>
 	</div>
+	<script>
+		function timeUntilNextDay() 
+		{
+			const now = new Date();
+			const nextDay = new Date(now);
+			nextDay.setHours(24, 0, 0, 0);
+
+			const diff = nextDay - now;
+
+			const hours = String(Math.floor(diff / 3600000)).padStart(2, "0");
+			const minutes = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+			const seconds = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+
+			return `${hours}:${minutes}:${seconds}`;
+		}
+
+		function timerUpdate() 
+		{
+			document.getElementById("gameResetTimer").innerHTML = timeUntilNextDay();
+		}
+		timerUpdate();
+		setInterval(timerUpdate, 1000);
+
+	</script>
 
 
 </body>

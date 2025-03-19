@@ -26,14 +26,12 @@ body
 
 #topBox
 {
-	/* margin-top:100px; */
 	height:15%;
 	width:100%;
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	border: none;
-	/* background-color: #F78C15; */
 }
 #bottomBox
 {
@@ -87,6 +85,14 @@ body
 	#selectionHeader p
 	{
 		font-size:12px !important;
+	}
+	#middleBox
+	{
+		height:40%;
+	}
+	#bottomBox
+	{
+		height:45%;
 	}
 }
   
@@ -157,4 +163,26 @@ body
 	padding: 10px 20px;
 	border-radius: 10px;
 	display: inline-block;
+}
+#gameResetTimer
+{
+	background-image: url("Assets/MainPage/timerBackground.png");
+	background-size: cover;
+	width:200px;
+	aspect-ratio: 1.94;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Russo';
+	color:white;
+	font-size:35px;
+}
+#bottomBox p
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	margin:0;
 }
