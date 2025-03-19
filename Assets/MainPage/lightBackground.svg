@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d2" />
+      <stop offset="100%" stop-color="#e0d6c0" />
+    </linearGradient>
+    
+    <!-- Subtle pattern -->
+    <pattern id="subtlePattern" patternUnits="userSpaceOnUse" width="120" height="120">
+      <path d="M0 60 Q 30 57, 60 60 T 120 60" stroke="#d0c4ae" stroke-width="0.7" fill="none" opacity="0.2" />
+      <path d="M0 30 Q 30 27, 60 30 T 120 30" stroke="#d0c4ae" stroke-width="0.7" fill="none" opacity="0.2" />
+      <path d="M0 90 Q 30 87, 60 90 T 120 90" stroke="#d0c4ae" stroke-width="0.7" fill="none" opacity="0.2" />
+    </pattern>
+  </defs>
+  
+  <!-- Main Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#subtlePattern)" />
+  
+  <!-- Extremely subtle parchment texture -->
+  <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0" in="noise" result="noiseAlpha"/>
+    <feComposite operator="in" in="noiseAlpha" in2="SourceGraphic" result="noiseComposite"/>
+  </filter>
+  
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.5"/>
+  
+  <!-- Very subtle corner decorations -->
+  <path d="M0 0 L 50 0 L 40 10 L 10 10 L 10 40 L 0 50 Z" fill="#c0b6a2" opacity="0.15" />
+  <path d="M1000 0 L 950 0 L 960 10 L 990 10 L 990 40 L 1000 50 Z" fill="#c0b6a2" opacity="0.15" />
+  <path d="M0 600 L 50 600 L 40 590 L 10 590 L 10 560 L 0 550 Z" fill="#c0b6a2" opacity="0.15" />
+  <path d="M1000 600 L 950 600 L 960 590 L 990 590 L 990 560 L 1000 550 Z" fill="#c0b6a2" opacity="0.15" />
+</svg>
