@@ -5,12 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearthle</title>
 	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="setGuess.css">
+	<link rel="stylesheet" href="../searchBar/searchBar.css">
 </head>
 <body>
 	<div id="topBox">
-		<button onclick="location.href = '../index.html'" style="all: unset; cursor: pointer;">
+		<button onclick="location.href = '../index.html'" id = "hearthleBtn">
 			<img src="../Assets/Shared/hearthle_logo.webp" alt="Logo">
 		</button>	
+	</div>
+	<div>
+		<div id="inputHolder">
+			<div id ="searchBarBackground">
+				<input id = "searchBar">
+			</div>
+		</div>
+		<div id = "setSymbolHolder">
+			<h3 style="margin-bottom:0;">Today's Set</h3>
+			<img src = "../Assets/SetGuess/SetIcons/Blackrock_Mountain.svg" title="Blackrock Mountain">
+			<h3 style="margin-top:0;">Blackrock Mountain</h3>
+		</div>
+		<div id = "gridHeaders">
+			<div>
+				Name
+			</div>	
+			<div>
+				Mana Cost
+			</div>
+			<div>
+				Class(es)
+			</div>	
+			<div>
+				Card Type
+			</div>
+			<div>
+				Rarity
+			</div>
+			<div>
+				Set
+			</div>
+		</div>
+		<div id = "gridHolder">
+			
+			<div id="grid">
+			</div>
+		</div>
+		
+		<script>
+			const grid = document.querySelector('#grid');
+			for (let i = 0; i < 6 * 8; i++) {
+				const cell = document.createElement('div');
+				cell.classList.add('cell');
+				grid.appendChild(cell);
+			}
+		</script>
+		<div style="height:1vh;">
+		</div>
 	</div>
 </body>
 </html>
