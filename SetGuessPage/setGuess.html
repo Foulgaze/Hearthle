@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="../index.css">
 	<link rel="stylesheet" href="setGuess.css">
 	<link rel="stylesheet" href="../searchBar/searchBar.css">
+	<link rel="stylesheet" href="../dropdown/dropdown.css">
+	<script type="module" src="../guessController.js"></script> 
+	<script type="module" src="../dropdown/dropdown.js"></script>
+	<script type="module" src="setGuess.js"></script> 
 </head>
 <body>
 	<div id="topBox">
@@ -20,30 +24,36 @@
 				<input id = "searchBar">
 			</div>
 		</div>
+		<div id = "dropdown-content"></div>
+
 		<div id = "setSymbolHolder">
 			<h3 style="margin-bottom:0;">Today's Set</h3>
-			<img src = "../Assets/SetGuess/SetIcons/Blackrock_Mountain.svg" title="Blackrock Mountain">
-			<h3 style="margin-top:0;">Blackrock Mountain</h3>
+			<img src = "" title="" id="setSymbol">
+			<h3 style="margin-top:0;" id = "setTitle"></h3>
 		</div>
 		<div id = "gridHeaders">
 			<div>
 				Name
 			</div>	
 			<div>
-				Mana Cost
-			</div>
-			<div>
-				Class(es)
-			</div>	
-			<div>
-				Card Type
+				Cost
 			</div>
 			<div>
 				Rarity
 			</div>
 			<div>
-				Set
+				Class
+			</div>	
+			<div>
+				Attack
 			</div>
+			<div>
+				Health
+			</div>
+			<div>
+				Type
+			</div>
+			
 		</div>
 		<div id = "gridHolder">
 			
@@ -53,7 +63,7 @@
 		
 		<script>
 			const grid = document.querySelector('#grid');
-			for (let i = 0; i < 6 * 8; i++) {
+			for (let i = 0; i < 7 * 8; i++) {
 				const cell = document.createElement('div');
 				cell.classList.add('cell');
 				grid.appendChild(cell);

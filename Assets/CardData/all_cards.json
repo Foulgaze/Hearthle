@@ -342,7 +342,6 @@
     "SPIRIT JAILER": {
         "classes": [
             "Warlock",
-            "Warlock",
             "Demon Hunter"
         ],
         "name": "Spirit Jailer",
@@ -3226,10 +3225,9 @@
     },
     "AYA BLACKPAW": {
         "classes": [
-            "Neutral",
+            "Shaman",
             "Druid",
-            "Rogue",
-            "Shaman"
+            "Rogue"
         ],
         "name": "Aya Blackpaw",
         "cardType": "Minion",
@@ -5669,9 +5667,8 @@
     },
     "GLOOMSTONE GUARDIAN": {
         "classes": [
-            "Druid",
-            "Druid",
-            "Warlock"
+            "Warlock",
+            "Druid"
         ],
         "name": "Gloomstone Guardian",
         "cardType": "Minion",
@@ -7592,7 +7589,6 @@
     "PLAGIARIZARRR": {
         "classes": [
             "Priest",
-            "Priest",
             "Rogue"
         ],
         "name": "Plagiarizarrr",
@@ -7933,10 +7929,9 @@
     },
     "LOTUS AGENTS": {
         "classes": [
-            "Neutral",
+            "Shaman",
             "Druid",
-            "Rogue",
-            "Shaman"
+            "Rogue"
         ],
         "name": "Lotus Agents",
         "cardType": "Minion",
@@ -8076,9 +8071,8 @@
     },
     "SPEAKER GIDRA": {
         "classes": [
-            "Neutral",
-            "Druid",
-            "Shaman"
+            "Shaman",
+            "Druid"
         ],
         "name": "Speaker Gidra",
         "cardType": "Minion",
@@ -11738,10 +11732,9 @@
     },
     "KABAL COURIER": {
         "classes": [
-            "Neutral",
+            "Warlock",
             "Mage",
-            "Priest",
-            "Warlock"
+            "Priest"
         ],
         "name": "Kabal Courier",
         "cardType": "Minion",
@@ -12202,8 +12195,7 @@
     "FIDDLEFIRE IMP": {
         "classes": [
             "Warlock",
-            "Mage",
-            "Warlock"
+            "Mage"
         ],
         "name": "Fiddlefire Imp",
         "cardType": "Minion",
@@ -13123,9 +13115,8 @@
     },
     "BLOOD TREANT": {
         "classes": [
-            "Druid",
-            "Druid",
-            "Warlock"
+            "Warlock",
+            "Druid"
         ],
         "name": "Blood Treant",
         "cardType": "Minion",
@@ -13685,9 +13676,8 @@
     },
     "RAS FROSTWHISPER": {
         "classes": [
-            "Neutral",
-            "Mage",
-            "Shaman"
+            "Shaman",
+            "Mage"
         ],
         "name": "Ras Frostwhisper",
         "cardType": "Minion",
@@ -13927,7 +13917,6 @@
     },
     "YELLING YODELER": {
         "classes": [
-            "Death Knight",
             "Death Knight",
             "Hunter"
         ],
@@ -15629,10 +15618,9 @@
     },
     "GRIMESTREET INFORMANT": {
         "classes": [
-            "Neutral",
+            "Warrior",
             "Hunter",
-            "Paladin",
-            "Warrior"
+            "Paladin"
         ],
         "name": "Grimestreet Informant",
         "cardType": "Minion",
@@ -17752,7 +17740,6 @@
     },
     "MANTLE SHAPER": {
         "classes": [
-            "Mage",
             "Hunter",
             "Mage"
         ],
@@ -18414,7 +18401,6 @@
     },
     "WAND THIEF": {
         "classes": [
-            "Neutral",
             "Mage",
             "Rogue"
         ],
@@ -19977,8 +19963,7 @@
     "SHADESTONE SKULKER": {
         "classes": [
             "Demon Hunter",
-            "Rogue",
-            "Demon Hunter"
+            "Rogue"
         ],
         "name": "Shadestone Skulker",
         "cardType": "Minion",
@@ -20258,10 +20243,9 @@
     },
     "KAZAKUS": {
         "classes": [
-            "Neutral",
+            "Warlock",
             "Mage",
-            "Priest",
-            "Warlock"
+            "Priest"
         ],
         "name": "Kazakus",
         "cardType": "Minion",
@@ -20381,9 +20365,8 @@
     },
     "SIR FINLEY, THE INTREPID": {
         "classes": [
-            "Paladin",
-            "Paladin",
-            "Shaman"
+            "Shaman",
+            "Paladin"
         ],
         "name": "Sir Finley, the Intrepid",
         "cardType": "Minion",
@@ -21684,7 +21667,6 @@
     "COOL GHOUL": {
         "classes": [
             "Death Knight",
-            "Death Knight",
             "Paladin"
         ],
         "name": "Cool Ghoul",
@@ -21805,9 +21787,8 @@
     },
     "RHYTHMDANCER RISA": {
         "classes": [
-            "Rogue",
-            "Rogue",
-            "Demon Hunter"
+            "Demon Hunter",
+            "Rogue"
         ],
         "name": "Rhythmdancer Risa",
         "cardType": "Minion",
@@ -22167,10 +22148,9 @@
     },
     "JADE SPIRIT": {
         "classes": [
-            "Neutral",
+            "Shaman",
             "Druid",
-            "Rogue",
-            "Shaman"
+            "Rogue"
         ],
         "name": "Jade Spirit",
         "cardType": "Minion",
@@ -22690,9 +22670,9 @@
     },
     "GHOST": {
         "classes": [
-            "Paladin",
             "Shaman",
-            "Warrior"
+            "Warrior",
+            "Paladin"
         ],
         "name": "Ghost",
         "cardType": "Minion",
@@ -25912,9 +25892,8 @@
     },
     "LORD BAROV": {
         "classes": [
-            "Paladin",
-            "Paladin",
-            "Warrior"
+            "Warrior",
+            "Paladin"
         ],
         "name": "Lord Barov",
         "cardType": "Minion",
@@ -27715,7 +27694,6 @@
     "DEVOUT PUPIL": {
         "classes": [
             "Paladin",
-            "Paladin",
             "Priest"
         ],
         "name": "Devout Pupil",
@@ -27736,7 +27714,6 @@
     },
     "FANBOY": {
         "classes": [
-            "Priest",
             "Druid",
             "Priest"
         ],
@@ -28378,7 +28355,6 @@
     },
     "ABYSSAL BASSIST": {
         "classes": [
-            "Demon Hunter",
             "Warrior",
             "Demon Hunter"
         ],
@@ -28820,7 +28796,6 @@
     },
     "TEACHER'S PET": {
         "classes": [
-            "Hunter",
             "Druid",
             "Hunter"
         ],
@@ -29002,9 +28977,8 @@
     },
     "TROGG GEMTOSSER": {
         "classes": [
-            "Druid",
-            "Druid",
-            "Warlock"
+            "Warlock",
+            "Druid"
         ],
         "name": "Trogg Gemtosser",
         "cardType": "Minion",
@@ -29604,7 +29578,6 @@
     },
     "SHAN'DO WILDCLAW": {
         "classes": [
-            "Hunter",
             "Druid",
             "Hunter"
         ],
@@ -30926,9 +30899,8 @@
     },
     "DISCIPLINARIAN GANDLING": {
         "classes": [
-            "Priest",
-            "Priest",
-            "Warlock"
+            "Warlock",
+            "Priest"
         ],
         "name": "Disciplinarian Gandling",
         "cardType": "Minion",
@@ -31588,7 +31560,6 @@
     },
     "SOULCIOLOGIST MALICIA": {
         "classes": [
-            "Warlock",
             "Warlock",
             "Demon Hunter"
         ],
@@ -34670,9 +34641,8 @@
     },
     "GROUNDSKEEPER": {
         "classes": [
-            "Druid",
-            "Druid",
-            "Shaman"
+            "Shaman",
+            "Druid"
         ],
         "name": "Groundskeeper",
         "cardType": "Minion",
@@ -38172,9 +38142,8 @@
     },
     "STEELDANCER": {
         "classes": [
-            "Neutral",
-            "Rogue",
-            "Warrior"
+            "Warrior",
+            "Rogue"
         ],
         "name": "Steeldancer",
         "cardType": "Minion",
@@ -38574,9 +38543,8 @@
     },
     "DOOMKIN": {
         "classes": [
-            "Druid",
-            "Druid",
-            "Warlock"
+            "Warlock",
+            "Druid"
         ],
         "name": "Doomkin",
         "cardType": "Minion",
@@ -38876,10 +38844,9 @@
     },
     "GRIMESTREET SMUGGLER": {
         "classes": [
-            "Neutral",
+            "Warrior",
             "Hunter",
-            "Paladin",
-            "Warrior"
+            "Paladin"
         ],
         "name": "Grimestreet Smuggler",
         "cardType": "Minion",
@@ -39859,9 +39826,8 @@
     },
     "BRITTLEBONE DESTROYER": {
         "classes": [
-            "Priest",
-            "Priest",
-            "Warlock"
+            "Warlock",
+            "Priest"
         ],
         "name": "Brittlebone Destroyer",
         "cardType": "Minion",
@@ -40081,9 +40047,8 @@
     },
     "TRICK TOTEM": {
         "classes": [
-            "Neutral",
-            "Mage",
-            "Shaman"
+            "Shaman",
+            "Mage"
         ],
         "name": "Trick Totem",
         "cardType": "Minion",
@@ -40163,7 +40128,6 @@
     },
     "BLOOD HERALD": {
         "classes": [
-            "Demon Hunter",
             "Hunter",
             "Demon Hunter"
         ],
@@ -45108,9 +45072,8 @@
     },
     "IMPRISONED PHOENIX": {
         "classes": [
-            "Neutral",
-            "Mage",
-            "Shaman"
+            "Shaman",
+            "Mage"
         ],
         "name": "Imprisoned Phoenix",
         "cardType": "Minion",
@@ -45430,7 +45393,6 @@
     },
     "HOLLOW HOUND": {
         "classes": [
-            "Hunter",
             "Death Knight",
             "Hunter"
         ],
@@ -46372,7 +46334,6 @@
     },
     "FELFIRE DEADEYE": {
         "classes": [
-            "Neutral",
             "Hunter",
             "Demon Hunter"
         ],
@@ -48337,9 +48298,8 @@
     },
     "JUKEBOX TOTEM": {
         "classes": [
-            "Paladin",
-            "Paladin",
-            "Shaman"
+            "Shaman",
+            "Paladin"
         ],
         "name": "Jukebox Totem",
         "cardType": "Minion",
@@ -48879,7 +48839,6 @@
     },
     "NEEDLEROCK TOTEM": {
         "classes": [
-            "Shaman",
             "Shaman",
             "Warrior"
         ],
@@ -51421,10 +51380,9 @@
     },
     "DON HAN'CHO": {
         "classes": [
-            "Neutral",
+            "Warrior",
             "Hunter",
-            "Paladin",
-            "Warrior"
+            "Paladin"
         ],
         "name": "Don Han'Cho",
         "cardType": "Minion",
@@ -52005,7 +51963,6 @@
     "PROSTHETIC HAND": {
         "classes": [
             "Death Knight",
-            "Death Knight",
             "Paladin"
         ],
         "name": "Prosthetic Hand",
@@ -52206,9 +52163,8 @@
     },
     "DOCTOR KRASTINOV": {
         "classes": [
-            "Neutral",
-            "Rogue",
-            "Warrior"
+            "Warrior",
+            "Rogue"
         ],
         "name": "Doctor Krastinov",
         "cardType": "Minion",
@@ -52868,9 +52824,8 @@
     },
     "TOUGH CROWD": {
         "classes": [
-            "Rogue",
-            "Rogue",
-            "Demon Hunter"
+            "Demon Hunter",
+            "Rogue"
         ],
         "name": "Tough Crowd",
         "cardType": "Minion",
@@ -53690,9 +53645,9 @@
     },
     "SCV": {
         "classes": [
-            "Paladin",
             "Shaman",
-            "Warrior"
+            "Warrior",
+            "Paladin"
         ],
         "name": "SCV",
         "cardType": "Minion",
@@ -55012,7 +54967,6 @@
     },
     "KEYWARDEN IVORY": {
         "classes": [
-            "Neutral",
             "Mage",
             "Rogue"
         ],
@@ -55534,7 +55488,6 @@
     },
     "BACKSTAGE BOUNCER": {
         "classes": [
-            "Warrior",
             "Shaman",
             "Warrior"
         ],
@@ -56957,7 +56910,6 @@
     "HIDDEN GEM": {
         "classes": [
             "Priest",
-            "Priest",
             "Rogue"
         ],
         "name": "Hidden Gem",
@@ -58198,7 +58150,6 @@
     },
     "LUCKYSOUL HOARDER": {
         "classes": [
-            "Neutral",
             "Warlock",
             "Demon Hunter"
         ],
@@ -58560,7 +58511,6 @@
     },
     "HIGH ABBESS ALURA": {
         "classes": [
-            "Paladin",
             "Paladin",
             "Priest"
         ],
@@ -59022,10 +58972,9 @@
     },
     "KABAL CHEMIST": {
         "classes": [
-            "Neutral",
+            "Warlock",
             "Mage",
-            "Priest",
-            "Warlock"
+            "Priest"
         ],
         "name": "Kabal Chemist",
         "cardType": "Minion",
@@ -59605,7 +59554,6 @@
     },
     "JANDICE BAROV": {
         "classes": [
-            "Neutral",
             "Mage",
             "Rogue"
         ],
@@ -60167,7 +60115,6 @@
     },
     "COSTUMED SINGER": {
         "classes": [
-            "Mage",
             "Hunter",
             "Mage"
         ],
@@ -61249,7 +61196,6 @@
     },
     "ACE HUNTER KREEN": {
         "classes": [
-            "Demon Hunter",
             "Hunter",
             "Demon Hunter"
         ],
@@ -62951,7 +62897,6 @@
     },
     "OBSIDIAN REVENANT": {
         "classes": [
-            "Hunter",
             "Death Knight",
             "Hunter"
         ],
@@ -64933,9 +64878,8 @@
     },
     "FLESH GIANT": {
         "classes": [
-            "Priest",
-            "Priest",
-            "Warlock"
+            "Warlock",
+            "Priest"
         ],
         "name": "Flesh Giant",
         "cardType": "Minion",
