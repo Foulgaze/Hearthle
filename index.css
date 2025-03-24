@@ -8,11 +8,15 @@
 html, body 
 {
 	height: 100%;
+	width:100%;
 	margin: 0;
 	padding: 0;
+	overflow: scroll;
+	scroll-behavior: smooth;
 }
 body 
 {
+	position:fixed;
 	background-color: #FFFEFF;
 	font-family: Arial, sans-serif;
 	text-align: center;
@@ -70,6 +74,13 @@ body
 	justify-content: center;
 }
 
+@media (max-width: 1200px) 
+{
+	#selectionHeader p
+	{
+		font-size:30px !important;
+	}
+}
 @media (max-width: 1000px) 
 {
 	#selectionBackground
@@ -111,13 +122,13 @@ body
 #selectionHeader p
 {
 	font-family: "Russo";
-	font-size:40px;
+	font-size:35px;
 	color: black;
 }
 #innerBackground
 {
 	margin-left:.5%;
-	width:83%; /* Calculated from thickness of background border */
+	width:83%;
 	height:70.5%;
 }
 .options 
