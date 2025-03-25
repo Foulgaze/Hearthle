@@ -10,6 +10,7 @@ export class GuessController
         LOWER: "lower"
     }
     Rarities = ["Free","Common", "Rare", "Epic", "Legendary"]
+    previousGuessesCookiePath = "previousGuesses"
     guessedCards = []
     shareMessage = ""
     cardData = null
@@ -35,7 +36,7 @@ export class GuessController
 
     checkForPriorGuesses()
     {
-        let rawPriorGuesses = getCookie("priorGuesses")
+        let rawPriorGuesses = getCookie(this.previousGuessesCookiePath)
         if(rawPriorGuesses == null)
         {
             return
@@ -186,7 +187,7 @@ export class GuessController
 
         if(revealAttributesSlowly && this.useCookies)
         {
-            setCookie("priorGuesses", this.guessedCards.join("|"),undefined,this.cookiePath)
+            setCookie(this.previousGuessesCookiePath, this.guessedCards.join("|"),undefined,this.cookiePath)
         }
 
         if (this.guessedCards.length >= this.rowCount || guessIsCorrect) 
