@@ -1,3 +1,7 @@
+:root 
+{
+	--thumb-size: 25px;
+}
 #hearthleBtn
 {
 	height:100%;
@@ -28,6 +32,65 @@
 	width: 25%;
 	height: auto;
 }
+#volumeSliderHolder
+{
+	margin-bottom: max(1vw,1vh);
+	margin-left: auto;
+	margin-right: auto;
+}
+.custom-input 
+{
+	-webkit-appearance: none;
+	background: url('../Assets/SoundGuess/volumeSliderBackground.png') no-repeat center;
+	background-size: contain;
+	aspect-ratio:400/100;
+	width:7.5%;
+	padding-right: 2%;
+	padding-left: 2%;
+	outline: none;
+	margin: 0;
+}
+
+.custom-input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: var(--thumb-size); 
+	height: var(--thumb-size);  
+	background: url('../Assets/SoundGuess/volumeSlider.png') no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	border: none; 
+}
+
+.custom-input::-moz-range-thumb {
+	width: var(--thumb-size);  
+	height: var(--thumb-size); 
+	background: url('../Assets/SoundGuess/volumeSlider.png') no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	border: none;
+}
+
+.custom-input::-ms-thumb {
+	width: var(--thumb-size);  
+	height: var(--thumb-size);  
+	background: url('../Assets/SoundGuess/volumeSlider.png') no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	border: none;
+}
+
+@media (max-width:1000px)  
+{
+	:root 
+	{
+		--thumb-size: 15px;
+	}
+	.custom-input 
+	{
+		width:10%;
+	}
+}
 @media (max-width:480px)  
 {
 	.voiceGuess p
@@ -38,5 +101,10 @@
 	{
 		margin-top:10px;
 		width: 90vw; 
+	}
+
+	.custom-input 
+	{
+		display: none;
 	}
 }
