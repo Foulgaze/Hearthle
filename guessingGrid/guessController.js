@@ -59,7 +59,6 @@ export class GuessController
         const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()); 
         const daysSinceEpoch = Math.floor(localMidnight.getTime() / (1000 * 60 * 60 * 24));
         const listIndex = (daysSinceEpoch - day1) % cardNames.length;
-        console.log(listIndex)
         return cardNames[listIndex];
     }
 

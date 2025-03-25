@@ -18,9 +18,7 @@ function onWin()
 
 function init()
 {
-	// setCardSetSymbol()
 	setupCardSet()
-	console.log(guessController.targetCard)
 }
 function main()
 {
