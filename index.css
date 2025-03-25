@@ -1,0 +1,215 @@
+@font-face 
+{
+    font-family: "Russo";
+    src: url("Assets/Fonts/russo-one/RussoOne-Regular.ttf");
+}
+
+
+html, body 
+{
+	height: 100%;
+	width:100%;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+	scroll-behavior: smooth;
+}
+html
+{
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+body 
+{
+	overflow-x:hidden;
+
+	position:fixed;
+	background-color: #FFFEFF;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	color: #463C2D;
+	background-image: url("Assets/MainPage/lightBackground.svg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#topBox
+{
+	height:15%;
+	width:100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+}
+#topBox img
+{
+	height:90%;
+	width:auto;
+}
+#bottomBox
+{
+	height:15%;
+	width:100%;
+	/* background-color: #463C2D; */
+}
+#middleBox
+{
+	height:70%;
+	width:100%;
+	/* background-color: pink; */
+}
+
+#selectionAligner
+{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100%;
+}
+#selectionBackground
+{
+	background-image: url("Assets/MainPage/selectionBackground.png");
+	width:50%;
+	max-width:1200px;
+	aspect-ratio: 1.68;
+	background-size: cover;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 1200px) 
+{
+	#selectionHeader p
+	{
+		font-size:30px !important;
+	}
+}
+@media (max-width: 1000px) 
+{
+	#selectionBackground
+	{
+		width:80%;
+	}
+	#selectionHeader p
+	{
+		font-size:24px !important;
+	}
+}
+@media (max-width: 500px) 
+{
+	#selectionBackground
+	{
+		font-size:min(2.5vh,2.5vw);
+	}
+	#selectionHeader p
+	{
+		font-size:12px !important;
+	}
+	#middleBox
+	{
+		height:40%;
+	}
+	#bottomBox
+	{
+		height:45%;
+	}
+}
+  
+#selectionHeader
+{
+	height:20%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+#selectionHeader p
+{
+	font-family: "Russo";
+	font-size:35px;
+	color: black;
+}
+#innerBackground
+{
+	margin-left:.5%;
+	width:83%;
+	height:70.5%;
+}
+.options 
+{
+	display: flex;
+	justify-content: center;
+	gap: 10%;
+}
+  
+.options button
+{
+	cursor: pointer;
+}
+.options button:active
+{
+	box-shadow: none;
+	transform: translateY(5px);
+}
+
+.option 
+{
+	border:none;
+	width: 100%;
+	aspect-ratio: 1/1;	
+	background-size: cover !important; 
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+}
+.optionHolder
+{
+	width:22%;
+	font-size: max(1vh, 1vw);
+
+}
+.optionHolder h2
+{
+	font-size: max(1vh, 1vw);
+}
+
+
+.option-text 
+{
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.timer 
+{
+	margin-top: 30px;
+	background-color: #D3D3D3;
+	padding: 10px 20px;
+	border-radius: 10px;
+	display: inline-block;
+}
+#gameResetTimer
+{
+	background-image: url("Assets/MainPage/timerBackground.png");
+	background-size: cover;
+	width:200px;
+	aspect-ratio: 1.94;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Russo';
+	color:white;
+	font-size:35px;
+}
+#bottomBox p
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	margin:0;
+}

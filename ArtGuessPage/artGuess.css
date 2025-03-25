@@ -1,0 +1,76 @@
+
+#hearthleBtn
+{
+	height:100%;
+	cursor: pointer;
+	background-color: transparent;
+	background: none;
+	border: none;
+}
+#imageHolder
+{
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	border: 5px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+#fullArt
+{
+
+	width: 250px;
+	height:auto;
+}
+#zoomPercentageHolder
+{
+	background-size:cover;
+	background-image: url("../Assets/Shared/panel.png");
+	width:125px;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	aspect-ratio: 1666/856;
+	margin-bottom: 2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+#zoomPercentage
+{
+	font-family: 'Russo';
+	color: white;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width:480px)  
+{
+	#imageHolder
+	{
+		width: 150px;
+		height: 150px;
+		border: 3px solid black;
+		margin-top: 10px;
+		margin-bottom:10px;
+	}
+	#fullArt
+	{
+	
+		width: 100px;
+		height:auto;
+	}
+	#zoomPercentageHolder
+	{
+		width:50px;
+	}
+	#zoomPercentage
+	{
+		font-size: 8px;
+	}	
+}

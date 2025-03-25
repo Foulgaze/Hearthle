@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearthle</title>
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="artGuess.css">
+	<link rel="stylesheet" href="../searchBar/searchBar.css">
+	<link rel="stylesheet" href="../guessingGrid/grid.css">
+	<link rel="stylesheet" href="../dropdown/dropdown.css">
+	<script type="module" src="../guessingGrid/guessController.js"></script> 
+	<script type="module" src="../dropdown/dropdown.js"></script>
+	<script type="module" src="artGuess.js"></script> 
+</head>
+<body>
+	<div id="topBox">
+		<button onclick="location.href = '../index.html'" id = "hearthleBtn">
+			<img src="../Assets/Shared/hearthle_logo.webp" alt="Logo">
+		</button>	
+	</div>
+	<div>
+		<div id="inputHolder">
+			<div id ="searchBarBackground">
+				<input id = "searchBar" placeholder="Guess a Hearthstone Card">
+			</div>
+		</div>
+		<div id = "dropdown-content"></div>
+
+		<div id = "imageHolder">
+			<!-- <h3 style="margi n-bottom:0;">Today's Set</h3> -->
+			<img src = "" title="" id="fullArt">
+		</div>
+		<div id = "guessingFinished">
+			<h1>Card Name</h1>
+			<img id = "targetCardImage">
+		</div>
+		<div id = "zoomPercentageHolder">
+			<p id ="zoomPercentage">1500% Zoom</p>
+		</div>
+		<div id="victoryShare">
+			<h1>Share your Victory!</h1>
+			<button id = "shareBtn">
+				<img id="shareIcon" src="../Assets/Shared/forward-arrow-icon.svg">
+			</button>
+		</div>
+		<div id = "gridHeaders">
+			<div>
+				Name
+			</div>	
+			<div>
+				Cost
+			</div>
+			<div>
+				Rarity
+			</div>
+			<div>
+				Class
+			</div>	
+			<div>
+				Attack
+			</div>
+			<div>
+				Health
+			</div>
+			<div>
+				Type
+			</div>
+			
+		</div>
+		<div id = "gridHolder">
+			
+			<div id="grid">
+			</div>
+		</div>
+		
+		<script>
+			const grid = document.querySelector('#grid');
+			for (let i = 0; i < 7 * 8; i++) {
+				const cell = document.createElement('div');
+				cell.classList.add('cell');
+				grid.appendChild(cell);
+			}
+		</script>
+		<div style="height:1vh;">
+		</div>
+	</div>
+</body>
+</html>
