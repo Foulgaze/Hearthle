@@ -19,10 +19,15 @@
 			<img src="../Assets/Shared/hearthle_logo.webp" alt="Logo">
 		</button>	
 	</div>
+
+	<button id="randomCardBtn">
+		<p>Generate New Card</p>
+	</button>
+
 	<div>
 		<div id="inputHolder">
 			<div id ="searchBarBackground">
-				<input id = "searchBar" placeholder="Guess a Hearthstone Card">
+				<input id = "searchBar" placeholder="Guess a Hearthstone Card Here">
 			</div>
 		</div>
 		<div id = "dropdown-content"></div>
@@ -74,12 +79,16 @@
 		</div>
 		
 		<script>
-			const grid = document.querySelector('#grid');
-			for (let i = 0; i < 7 * 8; i++) {
-				const cell = document.createElement('div');
-				cell.classList.add('cell');
-				grid.appendChild(cell);
+			function initGrid()
+			{
+				const grid = document.querySelector('#grid');
+				for (let i = 0; i < 7 * 8; i++) {
+					const cell = document.createElement('div');
+					cell.classList.add('cell');
+					grid.appendChild(cell);
+				}
 			}
+			initGrid()
 		</script>
 		<div style="height:1vh;">
 		</div>
