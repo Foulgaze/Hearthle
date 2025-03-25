@@ -5,12 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearthle</title>
 	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="soundGuess.css">
+	<link rel="stylesheet" href="../searchBar/searchBar.css">
+	<link rel="stylesheet" href="../guessingGrid/grid.css">
+	<link rel="stylesheet" href="../dropdown/dropdown.css">
+	<script type="module" src="../guessingGrid/guessController.js"></script> 
+	<script type="module" src="../dropdown/dropdown.js"></script>
+	<script type="module" src="soundGuess.js"></script> 
 </head>
 <body>
 	<div id="topBox">
-		<button onclick="location.href = '../index.html'" style="all: unset; cursor: pointer;">
+		<button onclick="location.href = '../index.html'" id = "hearthleBtn">
 			<img src="../Assets/Shared/hearthle_logo.webp" alt="Logo">
 		</button>	
+	</div>
+	<div>
+		<div id="inputHolder">
+			<div id ="searchBarBackground">
+				<input id = "searchBar">
+			</div>
+		</div>
+		<div id = "dropdown-content"></div>
+		<div id = "voicelineHolder" >
+			<div class = "voiceGuess">
+			  <input class="voiceButton" type="image" src="../Assets/SoundGuess/playBtn.png" />
+			  <p>On Play</p>
+			</div>
+			<div class = "voiceGuess">
+			  <input class="voiceButton" type="image" src="../Assets/SoundGuess/attackBtn.png" />
+			  <p>On Attack</p>
+			</div>
+			<div class = "voiceGuess">
+			  <input class="voiceButton" type="image" src="../Assets/SoundGuess/deathBtn.png" />
+			  <p>On Death</p>
+			</div>
+		</div>
+		<div style="display: flex; align-items: center; justify-content: center; margin-bottom: max(1vw,1vh);">
+			<input class="custom-input" type="range" step="0.05" min="0" max ="1">
+		</div>
+		<div id = "imageHolder">
+			<img src = "" title="" id="fullArt">
+		</div>
+		<div id = "guessingFinished">
+			<h1>Card Name</h1>
+			<img id = "targetCardImage">
+		</div>
+		<div id="victoryShare">
+			<h1>Share your Victory!</h1>
+			<button id = "shareBtn">
+				<img id="shareIcon" src="../Assets/Shared/forward-arrow-icon.svg">
+			</button>
+		</div>
+		<div id = "gridHeaders">
+			<div>
+				Name
+			</div>	
+			<div>
+				Cost
+			</div>
+			<div>
+				Rarity
+			</div>
+			<div>
+				Class
+			</div>	
+			<div>
+				Attack
+			</div>
+			<div>
+				Health
+			</div>
+			<div>
+				Type
+			</div>
+			
+		</div>
+		<div id = "gridHolder">
+			
+			<div id="grid">
+			</div>
+		</div>
+		
+		<script>
+			const grid = document.querySelector('#grid');
+			for (let i = 0; i < 7 * 8; i++) {
+				const cell = document.createElement('div');
+				cell.classList.add('cell');
+				grid.appendChild(cell);
+			}
+		</script>
+		<div style="height:1vh;">
+		</div>
 	</div>
 </body>
 </html>
