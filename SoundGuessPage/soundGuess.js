@@ -6,8 +6,20 @@ import { setCookie, getCookie } from '../cookies.js'
 const cookiePath = "SoundGuessPage"
 const volumeCookie = "volume"
 
-function setupCardAudio()
+function setupCardAudio(randomCard)
 {
+	if(randomCard)
+	{
+		let voicelineHolder = document.getElementById("voicelineHolder")
+		let volumeChanger = document.getElementById("volumeSliderHolder")
+		voicelineHolder.style.display = "grid"
+		volumeChanger.style.display = "block"
+		while (guessController.gridParent.firstChild) 
+		{
+			guessController.gridParent.removeChild(guessController.gridParent.lastChild);
+		}
+		initGrid()
+	}
 	let playSound = document.getElementById("playSound")
 	let attackSound = document.getElementById("attackSound")
 	let deathSound = document.getElementById("deathSound")
@@ -21,7 +33,10 @@ function setupCardAudio()
 	deathSound.addEventListener("click", () => {pauseAudios();deathAudio.play()})
 	document.querySelector('.custom-input').addEventListener('input', () => updateAudio())
 	setAudio();
-	setupDropdown(function(name){window.guessController.cardHasBeenGuessed(name)},window.guessController.searchBar)
+	if(!randomCard)
+	{
+		setupDropdown(function(name){window.guessController.cardHasBeenGuessed(name)},window.guessController.searchBar)
+	}
 }
 
 function pauseAudios()
@@ -65,9 +80,9 @@ function onWin()
 	volumeChanger.style.display = "none"
 }
 
-function init()
+function init(randomCard = false)
 {
-	setupCardAudio()
+	setupCardAudio(randomCard)
 }
 function main()
 {

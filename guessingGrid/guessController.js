@@ -10,11 +10,11 @@ export class GuessController
         LOWER: "lower"
     }
     Rarities = ["Free","Common", "Rare", "Epic", "Legendary"]
-    nameToData = {}
     guessedCards = []
     shareMessage = ""
     cardData = null
     targetCard = null
+    useCookies = true
 
     constructor(cardNamesPath, callback,searchHeaders, gridParent, col, row, onGuessCallback, onWinCallback, cookiePath, shareMessageHeader) 
 	{
@@ -28,6 +28,8 @@ export class GuessController
         this.onWinCallback = onWinCallback
         this.shareBtn = document.getElementById("shareBtn")
         this.shareMessageHeader = shareMessageHeader
+        this.randomCardBtn = document.getElementById("randomCardBtn")
+        this.randomCardBtn.onclick = () => {this.cardDataIsLoaded(this.cardData, this.cardNames,this.callback, true )}
         this.beginFetchingCardData(cardNamesPath, callback)
     }
 
@@ -38,7 +40,7 @@ export class GuessController
         {
             return
         }
-        const priorGuesses = rawPriorGuesses.split(",")
+        const priorGuesses = rawPriorGuesses.split("|")
         priorGuesses.forEach(guess =>{this.cardHasBeenGuessed(guess, false)})
     }
     beginFetchingCardData(cardNamesPath, callback) 
@@ -52,23 +54,43 @@ export class GuessController
         }).catch(error => this.dataHasErrored(error))
     }
 
-    getCardForSession(cardNames) 
+    getCardForSession() 
     {
         const day1 = Math.floor(1742792400000 / (1000 * 60 * 60 * 24))
         const now = new Date();
         const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()); 
         const daysSinceEpoch = Math.floor(localMidnight.getTime() / (1000 * 60 * 60 * 24));
-        const listIndex = (daysSinceEpoch - day1) % cardNames.length;
-        return cardNames[listIndex];
+        const listIndex = (daysSinceEpoch - day1) % this.cardNames.length;
+        return this.cardNames[listIndex];
     }
 
-    cardDataIsLoaded(data, cardNames, callback) 
+    getRandomCard()
+    {
+        let randomIndex = Math.floor(Math.random() * this.cardNames.length)
+        return this.cardNames[randomIndex]
+    }
+
+    cardDataIsLoaded(data, cardNames, callback, randomCard = false) 
 	{
-        this.cardData = data
-        this.targetCard = this.cardData[this.getCardForSession(cardNames)]
-        this.checkForPriorGuesses();
+        if (randomCard)
+        {
+            this.targetCard = this.cardData[this.getRandomCard()]
+            this.useCookies = false
+            this.guessedCards = []
+            this.searchBar.parentElement.parentElement.style.display = "block"
+            document.getElementById("guessingFinished").style.display = 'none'
+            document.getElementById("victoryShare").style.display = "none"
+        }
+        else
+        {
+            this.cardData = data
+            this.cardNames = cardNames
+            this.targetCard = this.cardData[this.getCardForSession()]
+            this.checkForPriorGuesses()
+            this.callback = callback
+        }
         this.searchBar.disabled = false
-		callback()
+		this.callback(randomCard)
     }
 
     findOverlappingElements(arr1, arr2) 
@@ -162,9 +184,9 @@ export class GuessController
 
         this.guessedCards.push(name)
 
-        if(revealAttributesSlowly)
+        if(revealAttributesSlowly && this.useCookies)
         {
-            setCookie("priorGuesses", this.guessedCards.join(","),undefined,this.cookiePath)
+            setCookie("priorGuesses", this.guessedCards.join("|"),undefined,this.cookiePath)
         }
 
         if (this.guessedCards.length >= this.rowCount || guessIsCorrect) 
@@ -235,7 +257,10 @@ export class GuessController
                 headerMessage += "es"
                 this.shareMessageHeader += "es"
             }
-            this.setupShareBtn();
+            if(this.useCookies)
+            {
+                this.setupShareBtn();
+            }
         }
         else
         {
@@ -243,8 +268,9 @@ export class GuessController
         }
         finishedGuessing.children[0].innerHTML = headerMessage
         finishedGuessing.children[1].src = this.targetCard.image
-        this.searchBar.parentElement.parentElement.style.display = "none";
-        this.onWinCallback();
+        this.searchBar.parentElement.parentElement.style.display = "none"
+        this.randomCardBtn.style.display = "block"
+        this.onWinCallback()
         document.body.scrollTo({ top: 0 })
 
     }
