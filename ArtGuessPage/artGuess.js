@@ -12,7 +12,6 @@ function setupCardArt()
 	fullArt.style.transform = `scale(${zoomLevel}%)`;
 	zoomPercentage.innerHTML = `${zoomLevel}%<br>Zoom`
 	setupDropdown(function(name){window.guessController.cardHasBeenGuessed(name)},window.guessController.searchBar)
-	console.log("Setting zoom")
 }
 
 function onWin()
@@ -28,7 +27,6 @@ function onGuess()
 	let zoomLevel = zoomLevels[currentZoomLevel++]
 	fullArt.style.transform = `scale(${zoomLevel}%)`;
 	zoomPercentage.innerHTML = `${zoomLevel}%<br>Zoom`
-	console.log("Updating Zoom to ", zoomLevel)
 
 }
 
