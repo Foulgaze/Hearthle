@@ -53,10 +53,12 @@ export class GuessController
     }
 
     getCardForSession(cardNames) 
-	{
-        const daysSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60 * 24))
-        const listIndex = daysSinceEpoch % cardNames.length
-        return cardNames[listIndex]
+    {
+        const now = new Date();
+        const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()); 
+        const daysSinceEpoch = Math.floor(localMidnight.getTime() / (1000 * 60 * 60 * 24));
+        const listIndex = daysSinceEpoch % cardNames.length;
+        return cardNames[listIndex];
     }
 
     cardDataIsLoaded(data, cardNames, callback) 
@@ -64,10 +66,7 @@ export class GuessController
         this.cardData = data
         this.targetCard = this.cardData[this.getCardForSession(cardNames)]
         this.checkForPriorGuesses();
-        if(getCookie("wonToday") != "true")
-        {
-            this.searchBar.disabled = false
-        }
+        this.searchBar.disabled = false
 		callback()
     }
 
@@ -193,10 +192,6 @@ export class GuessController
                 : updateCell()
         });
         this.onGuessCallback();
-        if(guessIsCorrect && revealAttributesSlowly)
-        {
-            setCookie("wonToday", true, undefined, this.cookiePath)
-        }
         if (this.guessedCards.length === this.rowCount || guessIsCorrect) 
         {
             revealAttributesSlowly
@@ -247,6 +242,7 @@ export class GuessController
         }
         finishedGuessing.children[0].innerHTML = headerMessage
         finishedGuessing.children[1].src = this.targetCard.image
+        this.searchBar.parentElement.parentElement.style.display = "none";
         this.onWinCallback();
         document.body.scrollTo({ top: 0 })
 
