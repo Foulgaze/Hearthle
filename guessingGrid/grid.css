@@ -103,7 +103,8 @@
 
 #targetCardImage
 {
-	width:70%;
+	width:65%;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -113,6 +114,7 @@
 	width:25px;
 	padding: 0;
 }
+
 
 #shareBtn
 {
